@@ -1,0 +1,141 @@
+html {
+    width: 800px;
+    justify-content: center;
+    filter: brightness(100%);
+}
+
+span {
+    background: #ffb3b3;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.main-header {
+    background: #ffb3b3;
+    font-family: 'Grand Hotel', cursive;
+    border-radius: 25%;
+    width: 525px;
+
+}
+
+.today {
+    display: inline-flex;
+    flex-direction: row;
+    color: chartreuse;
+    align-content: center;
+}
+
+.time{
+   margin-left: 10px; 
+}
+.day{
+  margin-left: 2px;  
+}
+.title {
+    background-color: rgba(192, 192, 192, 0.3);
+    border-radius: 5px;
+    color: aqua;
+    background-color: cornsilk;
+
+}
+
+.available span {
+    background: green;
+}
+
+.nearby span:after {
+    content: "nearby";
+    margin-left: 10px;
+}
+
+.extra-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container {
+    width: 100vw;
+    background-color: cornflowerblue;
+}
+
+.containerSon {
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    height: 1050px;
+    width: 1000px;
+    background-image: url(https://image.ibb.co/n7FEuf/huanchaco-Peru.jpg);
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 5px;
+    margin-bottom: 15%;
+}
+
+.center {
+    justify-content: center;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: #1a001a;
+    background-color: cornsilk;
+ 
+}
+
+.right {
+    justify-content: flex-end;
+    font-size: 40px;
+    color: #1a001a;
+    padding-left: 20px;
+}
+
+#search-button {
+    width: 200px;
+    margin-top: 10px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imageGif {
+    width: 200px;
+    height: 200px;
+    border-radius: 25%;
+}
+
+#table-weather {
+    margin-top: 2.0rem;
+    background-color: rgba(192, 192, 192, 0.3);
+    display: flex;
+    justify-content: center;
+    height: 20.5rem;
+    filter: brightness(200%);
+    font-size: 20px;
+    border-radius: 2%;
+}
+
+#demo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 1.8rem;
+
+}
+
+#search-inputs {
+    border-radius: 25px;
+    padding: 0 10px;
+    width: 70%;
+    font-size: 2.0rem;
+}
+
+h1 {
+    font-family: 'Grand Hotel', cursive;
+    justify-content: center;
+    border-radius: 25px;
+    color: black;
+}
+
+
+

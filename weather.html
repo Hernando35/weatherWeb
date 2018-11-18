@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.1/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <title> Weather Forecast information </title>
+    <link rel="stylesheet" type="text/css" href="style/weather-icons-master/css/weather-icons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style/style.weather.css">
+</head>
+
+<body class="container">
+    <div id="today" class="today">
+    <b class="time">Today is:</b>
+    <p class="day"></p>
+    <script type="text/javascript">
+        document.getElementById("today").appendChild(document.createTextNode(new Date().toLocaleString()))
+    </script>
+    </div>
+    <!--First Vue-->
+    <div id="amp" class="containerSon">
+        <div>
+            <b class="greet">What's new doc?</b>
+        </div>
+        <span class="title">
+            <h1> Weather forecast for the next 3 hours </h1>
+        </span>
+        <br>
+        <div id="demo"></div>
+        <input type="text" id="search-inputs" placeholder="type a city">
+        <button id="search-button" class="btn btn-primary" @click="getData">search</button> <!-- //@click.once="reloadWeb"-->
+        <div v-if="isLoaded" class="center">City: {{cityName}}, Country: {{country}}</div>
+        <div v-if="isLoaded" class="right"> {{tempNow}}</div>
+        <div v-if="isLoaded" @click="backgroundSetter" class="images" id="imagesall">
+        </div>
+        <table id="table-weather" v-if="isLoaded" class="table table-dark">
+            <tbody>
+                <tr id="ShowIcon">
+                    <td>
+                        <i v-if="isLoaded" @click="createIcon" class="wi wi-rain"></i>
+                    </td>
+                    <td>
+                        <i v-if="isLoaded" @click="createIcon" class="wi wi-cloud"></i>
+                    </td>
+                    <td>
+                        <i v-if="isLoaded" @click="createIcon" class="wi wi-snow"> </i>
+                    </td>
+                    <td>
+                        <i v-if="isLoaded" @click="createIcon" class="wi wi-day-sunny"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description: {{description}}</td>
+                    <td>Humidity: {{humidity}}</td>
+                    <td>Weather: {{weather}}</td>
+                </tr>
+                <tr>
+                    <td>Temperature min: {{tempMin}}</td>
+                    <td>Temperature max: {{tempMax}}</td>
+                    <td>Sea level: {{seaLevel}}</td>
+                </tr>
+                <tr>
+                    <td>Speed in m/s: {{ speed }}</td>
+                    <td>Wind direction: {{ deg }}</td>
+                    <td>Coord: {{ coord }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="javaScript/script.weather.js"></script>
+</body>
+
+</html>
